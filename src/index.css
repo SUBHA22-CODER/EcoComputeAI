@@ -1,0 +1,44 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+@theme {
+  --font-display: "Space Grotesk", sans-serif;
+  --color-primary: #19e65e;
+  --color-background-dark: #112116;
+  --color-neutral-800: #1a2e21;
+  --color-neutral-700: #244730;
+  --color-neutral-600: #346544;
+}
+
+@layer base {
+  body {
+    @apply bg-background-dark text-slate-100 font-display;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .light {
+    --color-background-dark: #f8fafc;
+    --color-neutral-950: #f1f5f9;
+    --color-neutral-900: #edf2f7;
+    --color-neutral-800: #ffffff;
+    --color-neutral-700: #e2e8f0;
+    --color-neutral-600: #cbd5e1;
+    --color-slate-100: #0f172a;
+    --color-slate-300: #334155;
+    --color-slate-400: #475569;
+    --color-slate-500: #64748b;
+    --color-slate-600: #94a3b8;
+    --color-white: #0f172a;
+    color-scheme: light;
+  }
+}
+
+.radial-progress-bg {
+  stroke: var(--color-neutral-700);
+}
+
+.radial-progress-value {
+  stroke: var(--color-primary);
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.5s ease;
+}
